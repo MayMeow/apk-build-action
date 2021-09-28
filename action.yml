@@ -1,0 +1,22 @@
+name: "Apk build action"
+author: "May Meow"
+branding:
+  icon: "package"
+  color: "purple"
+inputs:
+  android-compile-sdk:
+    description: "ANDROID_COMPILE_SDK is the version of Android you're compiling with."
+    required: true
+  android-build-tools:
+    description: "ANDROID_BUILD_TOOLS is the version of the Android build tools you are using."
+    required: true
+  android-sdk-tools:
+    description: "It's what version of the command line tools we're going to download from the official site."
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.android-compile-sdk }}
+    - ${{ inputs.android-build-tools }}
+    - ${{ inputs.android-sdk-tools }}
