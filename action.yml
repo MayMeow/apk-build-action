@@ -1,5 +1,6 @@
-name: "Apk build action"
+name: "APK build action"
 author: "May Meow"
+description: "This action will create debug APK from android studio project."
 branding:
   icon: "package"
   color: "purple"
